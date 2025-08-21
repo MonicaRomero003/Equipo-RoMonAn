@@ -10,12 +10,12 @@
             --color-light: #eaf4fb;
             --color-dark: #386c8a;
             --color-accent: #fff;
+            --color-hover: #417ea3;
         }
         body {
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
             background: linear-gradient(180deg, var(--color-light) 0%, var(--color-base) 100%);
-            color: #333;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -26,8 +26,6 @@
             align-items: center;
             justify-content: space-between;
             padding: 28px 36px 20px 36px;
-            position: relative;
-            box-shadow: 0 2px 6px rgba(91, 155, 186, 0.1);
         }
         .logo-placeholder {
             width: 80px;
@@ -53,21 +51,27 @@
             display: flex;
             justify-content: center;
             background: linear-gradient(90deg, var(--color-base) 0%, var(--color-light) 100%);
-            box-shadow: 0 1px 3px rgba(91, 155, 186, 0.05);
+            gap: 20px;
+            padding: 20px 0;
         }
-        .nav-btn {
-            background: none;
-            border: none;
-            color: var(--color-dark);
-            padding: 18px 36px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-            font-weight: 500;
+        .nav-link {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--color-accent);
+            background: var(--color-base);
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-size: 1.15em;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(91,155,186,0.12);
+            border: 2px solid var(--color-base);
+            transition: background 0.2s, color 0.2s, border 0.2s, transform 0.1s;
         }
-        .nav-btn:hover {
-            background: var(--color-light);
-            color: var(--color-base);
+        .nav-link:hover, .nav-link:focus {
+            background: var(--color-hover);
+            color: var(--color-accent);
+            border: 2px solid var(--color-hover);
+            transform: translateY(-2px) scale(1.05);
         }
         main {
             flex: 1;
@@ -117,8 +121,12 @@
                 font-size: 1em;
                 margin-top: 10px;
             }
-            nav .nav-btn {
-                padding: 12px 18px;
+            nav {
+                gap: 10px;
+                padding: 10px 0;
+            }
+            .nav-link {
+                padding: 10px 14px;
                 font-size: 1em;
             }
             .descripcion-placeholder {
@@ -137,14 +145,14 @@
         </div>
     </header>
     <nav>
-        <button class="nav-btn">Inicio</button>
-        <button class="nav-btn">Monica</button>
-        <button class="nav-btn">Roberto</button>
-        <button class="nav-btn">Andrey</button>
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="monica.html">Monica</a>
+        <a class="nav-link" href="roberto.html">Roberto</a>
+        <a class="nav-link" href="andrey.html">Andrey</a>
     </nav>
     <main>
         <div class="descripcion-placeholder">
-            Espacio para la descripción del proyecto.
+            Somos el equipo mas perro, pp fasty bunny, cha chauuu
         </div>
     </main>
     <footer>
